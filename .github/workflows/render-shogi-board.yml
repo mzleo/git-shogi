@@ -1,0 +1,75 @@
+name: Render shogi boards
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+    paths-ignore:
+      - generated/boards/**
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  render:
+    # The workflow writes generated SVGs back to the PR branch. Fork PRs do not
+    # have permission to receive pushes from this workflow.
+    if: github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out the PR branch
+        uses: actions/checkout@v7
+        with:
+          repository: ${{ github.event.pull_request.head.repo.full_name }}
+          ref: ${{ github.event.pull_request.head.ref }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.x"
+
+      - name: Generate SVG boards
+        run: python scripts/render_shogi_board.py
+
+      - name: Commit generated SVG boards
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: generate shogi board SVGs"
+          branch: ${{ github.event.pull_request.head.ref }}
+
+      - name: Add board preview to the pull request
+        uses: actions/github-script@v9
+        with:
+          script: |
+            const marker = '<!-- shogi-board-preview -->';
+            const repo = context.repo;
+            const headRepo = context.payload.pull_request.head.repo.full_name;
+            const headRef = context.payload.pull_request.head.ref;
+            const games = require(`${process.env.GITHUB_WORKSPACE}/data/games.json`);
+            const images = games.map((game) => {
+              const url = `https://raw.githubusercontent.com/${headRepo}/${encodeURIComponent(headRef)}/generated/boards/game-${game.gameId}.svg`;
+              return `### Game ${game.gameId}\n<img src="${url}" alt="Shogi game ${game.gameId}" width="720">`;
+            }).join('\n\n');
+            const body = `${marker}\n## Shogi board preview\n\n${images}`;
+            const comments = await github.paginate(github.rest.issues.listComments, {
+              owner: repo.owner,
+              repo: repo.repo,
+              issue_number: context.issue.number,
+            });
+            const existing = comments.find((comment) => comment.body?.includes(marker));
+            if (existing) {
+              await github.rest.issues.updateComment({
+                owner: repo.owner,
+                repo: repo.repo,
+                comment_id: existing.id,
+                body,
+              });
+            } else {
+              await github.rest.issues.createComment({
+                owner: repo.owner,
+                repo: repo.repo,
+                issue_number: context.issue.number,
+                body,
+              });
+            }
