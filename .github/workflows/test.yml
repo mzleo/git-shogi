@@ -1,0 +1,39 @@
+name: Test Python code
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+    paths:
+      - "**/*.py"
+      - "pyproject.toml"
+      - "uv.lock"
+      - ".flake8"
+      - ".github/workflows/test.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the PR
+        uses: actions/checkout@v4
+
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v6
+        with:
+          enable-cache: true
+          cache-dependency-glob: uv.lock
+
+      - name: Install Python and development tools
+        run: uv sync --locked --group dev
+
+      - name: Check formatting
+        run: uv run black --check scripts tests
+
+      - name: Run static analysis
+        run: uv run flake8 scripts tests
+
+      - name: Run tests
+        run: uv run pytest
