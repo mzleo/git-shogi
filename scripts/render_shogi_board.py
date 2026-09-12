@@ -1,4 +1,4 @@
-"""Render shogi positions stored in data/games.json as SVG files."""
+"""Render the shogi position stored in data/games.json as an SVG file."""
 
 from __future__ import annotations
 
@@ -17,6 +17,15 @@ PIECE_NAMES = {
     "N": "桂",
     "L": "香",
     "P": "歩",
+}
+
+PROMOTED_PIECE_NAMES = {
+    "R": "龍",
+    "B": "馬",
+    "S": "全",
+    "N": "圭",
+    "L": "杏",
+    "P": "と",
 }
 
 BOARD_SIZE = 9
@@ -72,6 +81,8 @@ def parse_board(sfen: str) -> tuple[list[list[str | None]], str, str, int]:
 
 
 def piece_label(piece: str) -> str:
+    if piece.startswith("+"):
+        return PROMOTED_PIECE_NAMES[piece[-1].upper()]
     return PIECE_NAMES[piece[-1].upper()]
 
 
@@ -111,7 +122,6 @@ def render_svg(game: dict) -> str:
             fill = "#fff8df" if piece[-1].isupper() else "#d8e8ff"
             transform = " rotate(180 {x} {y})" if piece[-1].islower() else ""
             label = html.escape(piece_label(piece))
-            promoted = " +" if piece.startswith("+") else ""
             svg.append(
                 f'<g transform="{transform.format(x=x, y=y)}">'
                 f'<path d="M {x - 25} {y - 30} L {x + 25} {y - 30} '
@@ -119,9 +129,7 @@ def render_svg(game: dict) -> str:
                 f'fill="{fill}" stroke="#49351f" stroke-width="2"/>'
                 f'<text x="{x}" y="{y + 10}" text-anchor="middle" '
                 f'font-family="serif" font-size="28" font-weight="bold">'
-                f'{label}</text>'
-                f'<text x="{x - 20}" y="{y - 14}" font-family="sans-serif" '
-                f'font-size="11">{promoted}</text></g>'
+                f'{label}</text></g>'
             )
 
     svg.append("</svg>")
@@ -131,20 +139,26 @@ def render_svg(game: dict) -> str:
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--input", type=Path, default=Path("data/games.json"))
-    parser.add_argument("--output-dir", type=Path, default=Path("generated/boards"))
+    parser.add_argument(
+        "--output",
+        type=Path,
+        default=Path("public/render-shogi-board.svg"),
+        help="SVG output path (the first game in the JSON array is rendered)",
+    )
     args = parser.parse_args()
 
     games = json.loads(args.input.read_text(encoding="utf-8"))
     if not isinstance(games, list):
         raise ValueError("games.json must contain an array")
+    if not games:
+        raise ValueError("games.json must contain at least one game")
 
-    args.output_dir.mkdir(parents=True, exist_ok=True)
-    for game in games:
-        if not isinstance(game, dict):
-            raise ValueError("Each game must be a JSON object")
-        output = args.output_dir / f"game-{game['gameId']}.svg"
-        output.write_text(render_svg(game), encoding="utf-8")
-        print(output)
+    if not isinstance(games[0], dict):
+        raise ValueError("Each game must be a JSON object")
+
+    args.output.parent.mkdir(parents=True, exist_ok=True)
+    args.output.write_text(render_svg(games[0]), encoding="utf-8")
+    print(args.output)
 
 
 if __name__ == "__main__":

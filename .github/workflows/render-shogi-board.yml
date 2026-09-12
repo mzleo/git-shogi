@@ -4,7 +4,7 @@ on:
   pull_request:
     types: [opened, synchronize, reopened]
     paths-ignore:
-      - generated/boards/**
+      - public/render-shogi-board.svg
 
 permissions:
   contents: write
@@ -32,10 +32,10 @@ jobs:
       - name: Generate SVG boards
         run: python scripts/render_shogi_board.py
 
-      - name: Commit generated SVG boards
+      - name: Commit generated SVG board
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "chore: generate shogi board SVGs"
+          commit_message: "chore: generate shogi board SVG"
           branch: ${{ github.event.pull_request.head.ref }}
 
       - name: Add board preview to the pull request
@@ -47,10 +47,8 @@ jobs:
             const headRepo = context.payload.pull_request.head.repo.full_name;
             const headRef = context.payload.pull_request.head.ref;
             const games = require(`${process.env.GITHUB_WORKSPACE}/data/games.json`);
-            const images = games.map((game) => {
-              const url = `https://raw.githubusercontent.com/${headRepo}/${encodeURIComponent(headRef)}/generated/boards/game-${game.gameId}.svg`;
-              return `### Game ${game.gameId}\n<img src="${url}" alt="Shogi game ${game.gameId}" width="720">`;
-            }).join('\n\n');
+            const url = `https://raw.githubusercontent.com/${headRepo}/${encodeURIComponent(headRef)}/public/render-shogi-board.svg`;
+            const images = `<img src="${url}" alt="Shogi board" width="720">`;
             const body = `${marker}\n## Shogi board preview\n\n${images}`;
             const comments = await github.paginate(github.rest.issues.listComments, {
               owner: repo.owner,

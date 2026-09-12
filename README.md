@@ -50,6 +50,10 @@ SFEN は空白区切りで、次の情報を順番に持ちます。
 
 ## 盤面 SVG
 
-Pull Request が作成・更新されると、GitHub Actions が `data/games.json` の各対局を読み込み、SFEN の盤面を SVG に変換します。
+Pull Request が作成・更新されると、GitHub Actions が `data/games.json` の先頭の対局を読み込み、SFEN の盤面を SVG に変換します。
 
-生成された SVG は `generated/boards/` に保存され、Pull Request のコメントから盤面を確認できます。
+生成された SVG は `public/render-shogi-board.svg` に保存され、Pull Request のコメントから盤面を確認できます。
+
+README からも生成された盤面を確認できます。
+
+![Shogi board](workflow-render-board.svg)

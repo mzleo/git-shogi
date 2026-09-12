@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="808" height="776" viewBox="0 0 808 776">
+<title>Shogi game 1</title>
+<rect width="100%" height="100%" fill="#f7e5b5"/>
+<text x="80" y="28" font-family="sans-serif" font-size="20" font-weight="bold">Game 1</text>
+<text x="80" y="52" font-family="sans-serif" font-size="16">Sente: 先手プレイヤー名 / Gote: 後手プレイヤー名 / Turn: b / Move: 1</text>
+<rect x="80" y="64" width="648" height="648" fill="#e8c77d" stroke="#49351f" stroke-width="3"/>
+<path d="M 80 64 V 712" stroke="#49351f" stroke-width="1"/>
+<path d="M 80 64 H 728" stroke="#49351f" stroke-width="1"/>
+<path d="M 152 64 V 712" stroke="#49351f" stroke-width="1"/>
+<path d="M 80 136 H 728" stroke="#49351f" stroke-width="1"/>
+<path d="M 224 64 V 712" stroke="#49351f" stroke-width="1"/>
+<path d="M 80 208 H 728" stroke="#49351f" stroke-width="1"/>
+<path d="M 296 64 V 712" stroke="#49351f" stroke-width="1"/>
+<path d="M 80 280 H 728" stroke="#49351f" stroke-width="1"/>
+<path d="M 368 64 V 712" stroke="#49351f" stroke-width="1"/>
+<path d="M 80 352 H 728" stroke="#49351f" stroke-width="1"/>
+<path d="M 440 64 V 712" stroke="#49351f" stroke-width="1"/>
+<path d="M 80 424 H 728" stroke="#49351f" stroke-width="1"/>
+<path d="M 512 64 V 712" stroke="#49351f" stroke-width="1"/>
+<path d="M 80 496 H 728" stroke="#49351f" stroke-width="1"/>
+<path d="M 584 64 V 712" stroke="#49351f" stroke-width="1"/>
+<path d="M 80 568 H 728" stroke="#49351f" stroke-width="1"/>
+<path d="M 656 64 V 712" stroke="#49351f" stroke-width="1"/>
+<path d="M 80 640 H 728" stroke="#49351f" stroke-width="1"/>
+<path d="M 728 64 V 712" stroke="#49351f" stroke-width="1"/>
+<path d="M 80 712 H 728" stroke="#49351f" stroke-width="1"/>
+<g transform=" rotate(180 116.0 100.0)"><path d="M 91.0 70.0 L 141.0 70.0 L 145.0 130.0 L 87.0 130.0 Z" fill="#d8e8ff" stroke="#49351f" stroke-width="2"/><text x="116.0" y="110.0" text-anchor="middle" font-family="serif" font-size="28" font-weight="bold">香</text></g>
+<g transform=" rotate(180 188.0 100.0)"><path d="M 163.0 70.0 L 213.0 70.0 L 217.0 130.0 L 159.0 130.0 Z" fill="#d8e8ff" stroke="#49351f" stroke-width="2"/><text x="188.0" y="110.0" text-anchor="middle" font-family="serif" font-size="28" font-weight="bold">桂</text></g>
+<g transform=" rotate(180 260.0 100.0)"><path d="M 235.0 70.0 L 285.0 70.0 L 289.0 130.0 L 231.0 130.0 Z" fill="#d8e8ff" stroke="#49351f" stroke-width="2"/><text x="260.0" y="110.0" text-anchor="middle" font-family="serif" font-size="28" font-weight="bold">銀</text></g>
+<g transform=" rotate(180 332.0 100.0)"><path d="M 307.0 70.0 L 357.0 70.0 L 361.0 130.0 L 303.0 130.0 Z" fill="#d8e8ff" stroke="#49351f" stroke-width="2"/><text x="332.0" y="110.0" text-anchor="middle" font-family="serif" font-size="28" font-weight="bold">金</text></g>
+<g transform=" rotate(180 404.0 100.0)"><path d="M 379.0 70.0 L 429.0 70.0 L 433.0 130.0 L 375.0 130.0 Z" fill="#d8e8ff" stroke="#49351f" stroke-width="2"/><text x="404.0" y="110.0" text-anchor="middle" font-family="serif" font-size="28" font-weight="bold">玉</text></g>
+<g transform=" rotate(180 476.0 100.0)"><path d="M 451.0 70.0 L 501.0 70.0 L 505.0 130.0 L 447.0 130.0 Z" fill="#d8e8ff" stroke="#49351f" stroke-width="2"/><text x="476.0" y="110.0" text-anchor="middle" font-family="serif" font-size="28" font-weight="bold">金</text></g>
+<g transform=" rotate(180 548.0 100.0)"><path d="M 523.0 70.0 L 573.0 70.0 L 577.0 130.0 L 519.0 130.0 Z" fill="#d8e8ff" stroke="#49351f" stroke-width="2"/><text x="548.0" y="110.0" text-anchor="middle" font-family="serif" font-size="28" font-weight="bold">銀</text></g>
+<g transform=" rotate(180 620.0 100.0)"><path d="M 595.0 70.0 L 645.0 70.0 L 649.0 130.0 L 591.0 130.0 Z" fill="#d8e8ff" stroke="#49351f" stroke-width="2"/><text x="620.0" y="110.0" text-anchor="middle" font-family="serif" font-size="28" font-weight="bold">桂</text></g>
+<g transform=" rotate(180 692.0 100.0)"><path d="M 667.0 70.0 L 717.0 70.0 L 721.0 130.0 L 663.0 130.0 Z" fill="#d8e8ff" stroke="#49351f" stroke-width="2"/><text x="692.0" y="110.0" text-anchor="middle" font-family="serif" font-size="28" font-weight="bold">香</text></g>
+<g transform=" rotate(180 188.0 172.0)"><path d="M 163.0 142.0 L 213.0 142.0 L 217.0 202.0 L 159.0 202.0 Z" fill="#d8e8ff" stroke="#49351f" stroke-width="2"/><text x="188.0" y="182.0" text-anchor="middle" font-family="serif" font-size="28" font-weight="bold">飛</text></g>
+<g transform=" rotate(180 620.0 172.0)"><path d="M 595.0 142.0 L 645.0 142.0 L 649.0 202.0 L 591.0 202.0 Z" fill="#d8e8ff" stroke="#49351f" stroke-width="2"/><text x="620.0" y="182.0" text-anchor="middle" font-family="serif" font-size="28" font-weight="bold">角</text></g>
+<g transform=" rotate(180 116.0 244.0)"><path d="M 91.0 214.0 L 141.0 214.0 L 145.0 274.0 L 87.0 274.0 Z" fill="#d8e8ff" stroke="#49351f" stroke-width="2"/><text x="116.0" y="254.0" text-anchor="middle" font-family="serif" font-size="28" font-weight="bold">歩</text></g>
+<g transform=" rotate(180 188.0 244.0)"><path d="M 163.0 214.0 L 213.0 214.0 L 217.0 274.0 L 159.0 274.0 Z" fill="#d8e8ff" stroke="#49351f" stroke-width="2"/><text x="188.0" y="254.0" text-anchor="middle" font-family="serif" font-size="28" font-weight="bold">歩</text></g>
+<g transform=" rotate(180 260.0 244.0)"><path d="M 235.0 214.0 L 285.0 214.0 L 289.0 274.0 L 231.0 274.0 Z" fill="#d8e8ff" stroke="#49351f" stroke-width="2"/><text x="260.0" y="254.0" text-anchor="middle" font-family="serif" font-size="28" font-weight="bold">歩</text></g>
+<g transform=" rotate(180 332.0 244.0)"><path d="M 307.0 214.0 L 357.0 214.0 L 361.0 274.0 L 303.0 274.0 Z" fill="#d8e8ff" stroke="#49351f" stroke-width="2"/><text x="332.0" y="254.0" text-anchor="middle" font-family="serif" font-size="28" font-weight="bold">歩</text></g>
+<g transform=" rotate(180 404.0 244.0)"><path d="M 379.0 214.0 L 429.0 214.0 L 433.0 274.0 L 375.0 274.0 Z" fill="#d8e8ff" stroke="#49351f" stroke-width="2"/><text x="404.0" y="254.0" text-anchor="middle" font-family="serif" font-size="28" font-weight="bold">歩</text></g>
+<g transform=" rotate(180 476.0 244.0)"><path d="M 451.0 214.0 L 501.0 214.0 L 505.0 274.0 L 447.0 274.0 Z" fill="#d8e8ff" stroke="#49351f" stroke-width="2"/><text x="476.0" y="254.0" text-anchor="middle" font-family="serif" font-size="28" font-weight="bold">歩</text></g>
+<g transform=" rotate(180 548.0 244.0)"><path d="M 523.0 214.0 L 573.0 214.0 L 577.0 274.0 L 519.0 274.0 Z" fill="#d8e8ff" stroke="#49351f" stroke-width="2"/><text x="548.0" y="254.0" text-anchor="middle" font-family="serif" font-size="28" font-weight="bold">歩</text></g>
+<g transform=" rotate(180 620.0 244.0)"><path d="M 595.0 214.0 L 645.0 214.0 L 649.0 274.0 L 591.0 274.0 Z" fill="#d8e8ff" stroke="#49351f" stroke-width="2"/><text x="620.0" y="254.0" text-anchor="middle" font-family="serif" font-size="28" font-weight="bold">歩</text></g>
+<g transform=" rotate(180 692.0 244.0)"><path d="M 667.0 214.0 L 717.0 214.0 L 721.0 274.0 L 663.0 274.0 Z" fill="#d8e8ff" stroke="#49351f" stroke-width="2"/><text x="692.0" y="254.0" text-anchor="middle" font-family="serif" font-size="28" font-weight="bold">歩</text></g>
+<g transform=""><path d="M 91.0 502.0 L 141.0 502.0 L 145.0 562.0 L 87.0 562.0 Z" fill="#fff8df" stroke="#49351f" stroke-width="2"/><text x="116.0" y="542.0" text-anchor="middle" font-family="serif" font-size="28" font-weight="bold">歩</text></g>
+<g transform=""><path d="M 163.0 502.0 L 213.0 502.0 L 217.0 562.0 L 159.0 562.0 Z" fill="#fff8df" stroke="#49351f" stroke-width="2"/><text x="188.0" y="542.0" text-anchor="middle" font-family="serif" font-size="28" font-weight="bold">歩</text></g>
+<g transform=""><path d="M 235.0 502.0 L 285.0 502.0 L 289.0 562.0 L 231.0 562.0 Z" fill="#fff8df" stroke="#49351f" stroke-width="2"/><text x="260.0" y="542.0" text-anchor="middle" font-family="serif" font-size="28" font-weight="bold">歩</text></g>
+<g transform=""><path d="M 307.0 502.0 L 357.0 502.0 L 361.0 562.0 L 303.0 562.0 Z" fill="#fff8df" stroke="#49351f" stroke-width="2"/><text x="332.0" y="542.0" text-anchor="middle" font-family="serif" font-size="28" font-weight="bold">歩</text></g>
+<g transform=""><path d="M 379.0 502.0 L 429.0 502.0 L 433.0 562.0 L 375.0 562.0 Z" fill="#fff8df" stroke="#49351f" stroke-width="2"/><text x="404.0" y="542.0" text-anchor="middle" font-family="serif" font-size="28" font-weight="bold">歩</text></g>
+<g transform=""><path d="M 451.0 502.0 L 501.0 502.0 L 505.0 562.0 L 447.0 562.0 Z" fill="#fff8df" stroke="#49351f" stroke-width="2"/><text x="476.0" y="542.0" text-anchor="middle" font-family="serif" font-size="28" font-weight="bold">歩</text></g>
+<g transform=""><path d="M 523.0 502.0 L 573.0 502.0 L 577.0 562.0 L 519.0 562.0 Z" fill="#fff8df" stroke="#49351f" stroke-width="2"/><text x="548.0" y="542.0" text-anchor="middle" font-family="serif" font-size="28" font-weight="bold">歩</text></g>
+<g transform=""><path d="M 595.0 502.0 L 645.0 502.0 L 649.0 562.0 L 591.0 562.0 Z" fill="#fff8df" stroke="#49351f" stroke-width="2"/><text x="620.0" y="542.0" text-anchor="middle" font-family="serif" font-size="28" font-weight="bold">歩</text></g>
+<g transform=""><path d="M 667.0 502.0 L 717.0 502.0 L 721.0 562.0 L 663.0 562.0 Z" fill="#fff8df" stroke="#49351f" stroke-width="2"/><text x="692.0" y="542.0" text-anchor="middle" font-family="serif" font-size="28" font-weight="bold">歩</text></g>
+<g transform=""><path d="M 163.0 574.0 L 213.0 574.0 L 217.0 634.0 L 159.0 634.0 Z" fill="#fff8df" stroke="#49351f" stroke-width="2"/><text x="188.0" y="614.0" text-anchor="middle" font-family="serif" font-size="28" font-weight="bold">角</text></g>
+<g transform=""><path d="M 595.0 574.0 L 645.0 574.0 L 649.0 634.0 L 591.0 634.0 Z" fill="#fff8df" stroke="#49351f" stroke-width="2"/><text x="620.0" y="614.0" text-anchor="middle" font-family="serif" font-size="28" font-weight="bold">飛</text></g>
+<g transform=""><path d="M 91.0 646.0 L 141.0 646.0 L 145.0 706.0 L 87.0 706.0 Z" fill="#fff8df" stroke="#49351f" stroke-width="2"/><text x="116.0" y="686.0" text-anchor="middle" font-family="serif" font-size="28" font-weight="bold">香</text></g>
+<g transform=""><path d="M 163.0 646.0 L 213.0 646.0 L 217.0 706.0 L 159.0 706.0 Z" fill="#fff8df" stroke="#49351f" stroke-width="2"/><text x="188.0" y="686.0" text-anchor="middle" font-family="serif" font-size="28" font-weight="bold">桂</text></g>
+<g transform=""><path d="M 235.0 646.0 L 285.0 646.0 L 289.0 706.0 L 231.0 706.0 Z" fill="#fff8df" stroke="#49351f" stroke-width="2"/><text x="260.0" y="686.0" text-anchor="middle" font-family="serif" font-size="28" font-weight="bold">銀</text></g>
+<g transform=""><path d="M 307.0 646.0 L 357.0 646.0 L 361.0 706.0 L 303.0 706.0 Z" fill="#fff8df" stroke="#49351f" stroke-width="2"/><text x="332.0" y="686.0" text-anchor="middle" font-family="serif" font-size="28" font-weight="bold">金</text></g>
+<g transform=""><path d="M 379.0 646.0 L 429.0 646.0 L 433.0 706.0 L 375.0 706.0 Z" fill="#fff8df" stroke="#49351f" stroke-width="2"/><text x="404.0" y="686.0" text-anchor="middle" font-family="serif" font-size="28" font-weight="bold">玉</text></g>
+<g transform=""><path d="M 451.0 646.0 L 501.0 646.0 L 505.0 706.0 L 447.0 706.0 Z" fill="#fff8df" stroke="#49351f" stroke-width="2"/><text x="476.0" y="686.0" text-anchor="middle" font-family="serif" font-size="28" font-weight="bold">金</text></g>
+<g transform=""><path d="M 523.0 646.0 L 573.0 646.0 L 577.0 706.0 L 519.0 706.0 Z" fill="#fff8df" stroke="#49351f" stroke-width="2"/><text x="548.0" y="686.0" text-anchor="middle" font-family="serif" font-size="28" font-weight="bold">銀</text></g>
+<g transform=""><path d="M 595.0 646.0 L 645.0 646.0 L 649.0 706.0 L 591.0 706.0 Z" fill="#fff8df" stroke="#49351f" stroke-width="2"/><text x="620.0" y="686.0" text-anchor="middle" font-family="serif" font-size="28" font-weight="bold">桂</text></g>
+<g transform=""><path d="M 667.0 646.0 L 717.0 646.0 L 721.0 706.0 L 663.0 706.0 Z" fill="#fff8df" stroke="#49351f" stroke-width="2"/><text x="692.0" y="686.0" text-anchor="middle" font-family="serif" font-size="28" font-weight="bold">香</text></g>
+</svg>
