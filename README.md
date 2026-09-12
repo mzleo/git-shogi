@@ -106,7 +106,7 @@ GitHub Actions の `test.yml` は、Black によるフォーマット、flake8 �
 開発用のチェックは次のコマンドで実行できます。
 
 ```shell
-python -m black --check scripts tests
-python -m flake8 scripts tests
-python -m pytest
+uv run black --check scripts tests
+uv run flake8 scripts tests
+uv run pytest
 ```
