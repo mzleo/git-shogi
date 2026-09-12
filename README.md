@@ -57,7 +57,7 @@ Pull Request が作成・更新されると、GitHub Actions が変更前後の�
 - `public/render-shogi-board-before.svg`: 変更前の盤面
 - `public/render-shogi-board.svg`: 変更後の盤面
 
-同じリポジトリ内の Pull Request では、生成された2つの SVG が Pull Request のコメントに Markdown 形式で表示されます。比較元の局面がない新規対局の場合は、Before は表示されません。
+同じリポジトリ内の Pull Request では、生成された2つの SVG が Pull Request のコメントに Markdown のテーブル形式で横並びに表示されます。比較元の局面がない新規対局の場合は、Before は表示されません。
 
 README からは現在の盤面を確認できます。
 

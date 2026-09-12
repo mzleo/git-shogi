@@ -55,10 +55,10 @@ jobs:
             const rawBase = `https://raw.githubusercontent.com/${headRepo}/${headRef}/public`;
             const beforePath = `${process.env.GITHUB_WORKSPACE}/public/render-shogi-board-before.svg`;
             const before = fs.existsSync(beforePath)
-              ? `### Before\n<img src="${rawBase}/render-shogi-board-before.svg" alt="Before shogi board" width="720">`
-              : '### Before\n比較元の盤面はありません。';
-            const after = `### After\n<img src="${rawBase}/render-shogi-board.svg" alt="After shogi board" width="720">`;
-            const body = `${marker}\n## Shogi board preview\n\n${before}\n\n${after}`;
+              ? `<img src="${rawBase}/render-shogi-board-before.svg" alt="Before shogi board" width="720">`
+              : '比較元の盤面はありません。';
+            const after = `<img src="${rawBase}/render-shogi-board.svg" alt="After shogi board" width="720">`;
+            const body = `${marker}\n## Shogi board preview\n\n| Before | After |\n|--------|-------|\n| ${before} | ${after} |`;
             const comments = await github.paginate(github.rest.issues.listComments, {
               owner: repo.owner,
               repo: repo.repo,
